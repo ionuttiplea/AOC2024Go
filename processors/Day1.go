@@ -35,8 +35,11 @@ func computeLists(input string) ([]int, []int, error) {
 	return arr1, arr2, nil
 }
 
-func ProcessDay1(input string) (interface{}, error) {
-	return ProcessDay1Part2(input)
+func ProcessDay1(input string) (interface{}, interface{}, error) {
+	result1, _ := ProcessDay1Part1(input)
+	result2, _ := ProcessDay1Part2(input)
+
+	return result1, result2, nil
 }
 
 func ProcessDay1Part2(input string) (interface{}, error) {
@@ -83,7 +86,6 @@ func ProcessDay1Part1(input string) (interface{}, error) {
 		}
 
 		result += diff
-		print(result, "\n")
 	}
 
 	return result, nil

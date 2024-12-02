@@ -48,7 +48,7 @@ func main() {
 	log.Printf("Starting processing input for Day %d ...\n", dayNo)
 	start := time.Now()
 
-	result, err := processFunc(input)
+	result1, result2, err := processFunc(input)
 
 	if err != nil {
 		log.Println("An error has occured while processing:", err)
@@ -56,8 +56,8 @@ func main() {
 	}
 
 	elapsed := time.Since(start)
-	log.Print("The result is: ")
-	log.Println(result)
+	log.Print("Result part 1 : ", result1)
+	log.Print("Result part 2 : ", result2)
 
 	log.Printf("The algorithm used to solve the problem took %s\n", elapsed)
 
